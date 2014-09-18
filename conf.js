@@ -26,10 +26,10 @@ exports.config = {
     realtimeFailure: true
   },
 
-  params: {
-    login: {
-      user: 'Jane',
-      password: '1234'
-    }
-  }
+//  params: {
+//    login: {
+//      user: 'Jane',
+//      password: '1234'
+//    }
+//  }
 };
