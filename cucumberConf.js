@@ -8,7 +8,7 @@ exports.config = {
 
   // Spec patterns are relative to this directory.
   specs: [
-    'cucumber/test.feature'
+    'cucumber/lib.feature'
   ],
 
   capabilities: env.capabilities,
