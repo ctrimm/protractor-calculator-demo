@@ -20,7 +20,8 @@ describe('angularjs homepage', function() {
   	add(1, 2);
   	add(3, 4);
 
-  	expect(history.last().getText()).toContain('1 + 2');
-  	expect(history.first().getText()).toContain('foo'); //This is incorrect
+  	expect(history.last().getText()).toContain('1 + 2'); //This is correct
+  	expect(history.first().getText()).toContain('3 + 4'); //This is correct
+  	expect(history.first().getText()).not.toContain('foo'); //This is INCORRECT
   });
 });
