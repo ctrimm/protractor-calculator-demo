@@ -34,8 +34,20 @@ module.exports = function() {
         next();
     });
 
-    this.Then(/the title should equal "([^"]*)"$/, function(text, next) {
+    this.Then(/the title of the page should equal "([^"]*)"$/, function(text, next) {
         expect(browser.getTitle()).to.eventually.equal(text).and.notify(next);
+    });
+
+    this.Then(/^I "([^"]*)" the numbers (\d+) and (\d+)$/, function (arg1, inputOne, inputTwo, next) {
+      var firstNumber = element(by.model('first'));
+      var secondNumber = element(by.model('second'));
+      var goButton = element(by.id('gobutton'));
+      var latestResult = element(by.binding('latest'));
+
+      firstNumber.sendKeys(inputOne);
+      secondNumber.sendKeys(inputTwo);
+      goButton.click();
+      next();
     });
 
 };

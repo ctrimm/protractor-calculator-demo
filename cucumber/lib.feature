@@ -5,5 +5,6 @@ Feature: Running Cucumber with Protractor
 
   @dev
   Scenario: Wrapping WebDriver
-    Given I go on "http://www.angularjs.org"
-    Then the title should equal "AngularJS — Superheroic JavaScript MVW Framework"
+    Given I go on "http://juliemr.github.io/protractor-demo/"
+    Then the title of the page should equal "Super Calculator"
+    Then I "add" the numbers 1 and 3
