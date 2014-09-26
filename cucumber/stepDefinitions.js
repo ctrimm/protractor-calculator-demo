@@ -50,4 +50,43 @@ module.exports = function() {
       next();
     });
 
+
+
+    /** stuff for testing interview kits **/
+
+    this.Given(/^I sign in to the interview kit with "([^"]*)" and "([^"]*)"$/, function (Name, Email, next) {
+      var name = element(by.model('interviewer.name'));
+      var email = element(by.model('interviewer.emailAddress'));
+
+      browser.sleep(8000); // sleep to make sure page loads
+
+      browser.sleep(4000);
+
+      name.sendKeys(Name);
+      email.sendKeys(Email);
+
+      // press enter in order to submit
+      email.sendKeys("\n");
+
+      browser.sleep(5000); // insomniac
+      next();
+    });
+
+    this.Given(/^I fill out the interview kit with:$/, function (table, next) {
+      // Write code here that turns the phrase above into concrete actions
+      next();
+    });
+
+    this.Given(/^I fill out interview notes with text "([^"]*)"$/, function (arg1, next) {
+      // Write code here that turns the phrase above into concrete actions
+      next();
+    });
+
+    this.Given(/^I stop$/, function (next) {
+      // Write code here that turns the phrase above into concrete actions
+      next();
+    });
+
+
+
 };
