@@ -8,7 +8,7 @@ module.exports = {
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
-        args: ['--test-type']
+        args: ['--test-type'] //need this to ignore any flags in chrome
     }
   },
 

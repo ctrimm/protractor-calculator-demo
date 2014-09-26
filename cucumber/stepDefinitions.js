@@ -58,15 +58,17 @@ module.exports = function() {
       var name = element(by.model('interviewer.name'));
       var email = element(by.model('interviewer.emailAddress'));
 
-      browser.sleep(8000); // sleep to make sure page loads
-
-      browser.sleep(4000);
+      browser.sleep(4000); // sleep to make sure page loads
 
       name.sendKeys(Name);
       email.sendKeys(Email);
 
       // press enter in order to submit
-      email.sendKeys("\n");
+      // email.sendKeys("\n");
+
+      // let's actually try to get the submit button
+      var startInterviewbutton = element(".form-group button");
+      startInterviewbutton.click();
 
       browser.sleep(5000); // insomniac
       next();
