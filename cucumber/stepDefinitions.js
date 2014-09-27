@@ -67,10 +67,10 @@ module.exports = function() {
       // email.sendKeys("\n");
 
       // let's actually try to get the submit button
-      var startInterviewbutton = element(".form-group button");
-      startInterviewbutton.click();
+      //var startInterviewbutton = element(".form-group button");
+      //startInterviewbutton.click();
 
-      browser.sleep(5000); // insomniac
+      //browser.sleep(5000); // insomniac
       next();
     });
 

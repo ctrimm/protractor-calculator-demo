@@ -4,13 +4,7 @@ module.exports = {
   seleniumAddress: 
     (process.env.SELENIUM_URL || 'http://localhost:4444/wd/hub'),
 
-  // Capabilities to be passed to the webdriver instance.
-  capabilities: {
-    'browserName': 'chrome',
-    'chromeOptions': {
-        args: ['--test-type'] //need this to ignore any flags in chrome
-    }
-  },
+
 
   // A base URL for your application under test.
   baseUrl:
